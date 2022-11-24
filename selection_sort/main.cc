@@ -1,7 +1,7 @@
 // Do not change me
 
 #include <iostream>
- 
+
 #include <list>
 #include <vector>
 #include <deque>
@@ -9,8 +9,6 @@
 #include <string>
 
 #include "my_sort.hpp"
-
-
 
 template<class CONT>
 void print_me(const CONT& c)

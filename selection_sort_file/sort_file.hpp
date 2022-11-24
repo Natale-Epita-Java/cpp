@@ -13,9 +13,9 @@
 // All occurences of XXX need to be replaced with
 // something more meaningful
 
- 
-template<class TYPE, class CONT>
-void read_file_to_cont(std::ifstream& f, CONT& c) {
+
+template<class TYPE, class CONTAINER>
+void read_file_to_cont(std::ifstream& f, CONTAINER& c) {
   TYPE elm;
   while (f >> elm) {
     c.push_back(elm);
@@ -32,7 +32,7 @@ void read_and_sort(std::ifstream& fi, std::ofstream& fo) {
   my_selection_sort(container.begin(), container.end());
 
   for (TYPE& elm : container) {
-    fo << elm << std::endl;
+    fo << elm << "\n";
   }
 
 }
@@ -43,7 +43,7 @@ void read_and_sort_decide_container(std::ifstream& fi, std::ofstream& fo) {
   char line;
   fi >> line;
 
-  fo << line << std::endl;
+  fo << line << "\n";
 
   switch(line)
   {
@@ -71,8 +71,8 @@ void read_and_sort_decide_valuetype(std::ifstream& fi, std::ofstream& fo) {
 
   fi >> line;
 
-  fo << line << std::endl;
-
+  fo << line << "\n";
+  
   switch(line)
   {
     case 'i':
